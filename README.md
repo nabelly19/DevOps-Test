@@ -26,14 +26,14 @@ Este projeto tem como objetivo demonstrar a implementação de práticas DevOps,
 
 O repositório está organizado da seguinte forma:
 
-
+~~~text
 DevOps/
 ├── app.py                  # Código fonte da API Flask
 ├── requirements.txt        # Dependências Python do projeto
 ├── test_app.py             # Testes unitários da API
 ├── azure-pipelines.yml     # Definição do pipeline CI/CD do Azure DevOps
 └── README.md               # Este arquivo de documentação
-
+~~~
 
 ## Configuração Local (Opcional, para desenvolvimento)
 
@@ -133,19 +133,11 @@ A API estará disponível em http://localhost:5000. A documentação Swagger est
 ## Pipeline CI/CD (azure-pipelines.yml)
 O arquivo azure-pipelines.yml define o pipeline de Integração Contínua e Entrega Contínua, consistindo nos seguintes estágios:
 
-* Build:
+* Build: Instala as dependências Python. Gera os artefatos de build (código empacotado).
 
-Instala as dependências Python.
+* Test: Executa os testes unitários definidos em test_app.py.
 
-Gera os artefatos de build (código empacotado).
-
-* Test:
-
-Executa os testes unitários definidos em test_app.py.
-
-* Deploy:
-
-Realiza o deploy automático da aplicação para os ambientes correspondentes no Azure App Service, com base na branch:
+* Deploy: Realiza o deploy automático da aplicação para os ambientes correspondentes no Azure App Service, com base na branch:
 
 main: Deploy para o ambiente de Produção.
 
@@ -171,10 +163,10 @@ Durante a avaliação, serão solicitadas demonstrações práticas de habilidad
 * Criar e gerenciar Pull Requests para migração de código entre as branches develop → release → main.
 
 # Links Úteis
-* > Documentação do Azure DevOps
+  > Documentação do Azure DevOps
 
-* > Documentação do Azure App Service
+  > Documentação do Azure App Service
 
-* > Documentação do Azure Database for MySQL
+  > Documentação do Azure Database for MySQL
 
-* > Gitflow Workflow
+  > Gitflow Workflow
