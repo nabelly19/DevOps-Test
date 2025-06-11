@@ -1,0 +1,5 @@
+Flask
+Flask-SQLAlchemy
+pymysql # Para conectar ao MySQL
+Flasgger # Para documentação Swagger
+gunicorn # Servidor WSGI para produção no App Service
